@@ -43,3 +43,6 @@ install:
 	install -m 0755 journal-gateway-gelf $(prefix)/bin
 	install -m 0644 ./misc/journal-gateway-gelf.service $(prefix)/etc/systemd/system/
 	install -m 0644 ./misc/journal-gateway-gelf.conf $(prefix)/etc
+
+docker-image:
+	docker build -t journal-gateway-gelf .
